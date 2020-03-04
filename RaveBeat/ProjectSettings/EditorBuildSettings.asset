@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Mandlebrot.unity
+    guid: bdbaf3c8f2ea83242b6de630c282a386
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 7fd247f26c04b4e49b79291fa53bc00c
   - enabled: 1
