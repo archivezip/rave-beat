@@ -73,12 +73,12 @@ public class GameConductor : MonoBehaviour
     public float hitOffset;
     public float nearOffset;
 
-    public bool blueGroundInUse;
-    public bool redGroundInUse;
-    public bool blueXInUse;
-    public bool blueYInUse;
-    public bool redXInUse;
-    public bool redYInUse;
+    public bool leftTriggerInUse;
+    public bool rightTriggerInUse;
+    public bool leftXInUse;
+    public bool leftYInUse;
+    public bool rightXInUse;
+    public bool rightYInUse;
     
 
 
@@ -109,12 +109,12 @@ public class GameConductor : MonoBehaviour
         nextNoteIndex = 0;
 
         //input checking
-        blueGroundInUse = false;
-        redGroundInUse = false;
-        blueXInUse = false;
-        blueYInUse = false;
-        redXInUse = false;
-        redYInUse = false;
+        leftTriggerInUse = false;
+        rightTriggerInUse = false;
+        leftXInUse = false;
+        leftYInUse = false;
+        rightXInUse = false;
+        rightYInUse = false;
 
         //chart data
         noteBeats = chart.notes;
@@ -371,6 +371,7 @@ public class GameConductor : MonoBehaviour
 
     }
 
+    /*
     void CheckInput()
     {
         if(Input.GetAxis("LeftGround") > 0.2f)
@@ -452,7 +453,91 @@ public class GameConductor : MonoBehaviour
             redYInUse = false;
         }
 
+    }*/
+
+    void CheckInput()
+    {
+        if (Input.GetAxis("LeftTrigger") > 0.2f)
+        {
+            if (!leftTriggerInUse)
+            {
+                PlayerInputted(2);
+                leftTriggerInUse = true;
+            }
+        }
+        else if (Input.GetAxis("LeftTrigger") == 0)
+        {
+            leftTriggerInUse = false;
+        }
+
+        if (Input.GetAxis("RightTrigger") > 0.2f)
+        {
+            if (!rightTriggerInUse)
+            {
+                PlayerInputted(3);
+                rightTriggerInUse = true;
+            }
+        }
+        else if (Input.GetAxis("RightTrigger") == 0)
+        {
+            rightTriggerInUse = false;
+        }
+
+        if (Input.GetAxis("LeftHorizontal") > 0.6f || Input.GetAxis("LeftHorizontal") < -0.6f)
+        {
+            if (!leftXInUse)
+            {
+                PlayerInputted(0);
+                leftXInUse = true;
+            }
+        }
+        else if (Input.GetAxis("LeftHorizontal") == 0)
+        {
+            leftXInUse = false;
+        }
+
+        if (Input.GetAxis("LeftVertical") > 0.6f || Input.GetAxis("LeftVertical") < -0.6f)
+        {
+            if (!leftYInUse)
+            {
+                PlayerInputted(0);
+                leftYInUse = true;
+            }
+        }
+        else if (Input.GetAxis("LeftVertical") == 0)
+        {
+            leftYInUse = false;
+        }
+
+
+        if (Input.GetAxis("RightHorizontal") > 0.6f || Input.GetAxis("RightHorizontal") < -0.6f)
+        {
+            if (!rightXInUse)
+            {
+                PlayerInputted(1);
+                rightXInUse = true;
+            }
+        }
+        else if (Input.GetAxis("RightHorizontal") == 0)
+        {
+            rightXInUse = false;
+        }
+
+        if (Input.GetAxis("RightVertical") > 0.6f || Input.GetAxis("RightVertical") < -0.6f)
+        {
+            if (!rightYInUse)
+            {
+                PlayerInputted(1);
+                rightYInUse = true;
+            }
+        }
+        else if (Input.GetAxis("RightVertical") == 0)
+        {
+            rightYInUse = false;
+        }
+
     }
+
 
     void TextUpdate()
     {
