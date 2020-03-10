@@ -585,12 +585,12 @@ MonoBehaviour:
   beatsOnTrack: 7
   hitOffset: 0.15
   nearOffset: 0.25
-  blueGroundInUse: 0
-  redGroundInUse: 0
-  blueXInUse: 0
-  blueYInUse: 0
-  redXInUse: 0
-  redYInUse: 0
+  leftTriggerInUse: 0
+  rightTriggerInUse: 0
+  leftXInUse: 0
+  leftYInUse: 0
+  rightXInUse: 0
+  rightYInUse: 0
 --- !u!82 &259239961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2426,7 +2426,6 @@ GameObject:
   - component: {fileID: 953736527}
   - component: {fileID: 953736526}
   - component: {fileID: 953736525}
-  - component: {fileID: 953736528}
   m_Layer: 5
   m_Name: Resume
   m_TagString: Untagged
@@ -2626,18 +2625,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953736523}
   m_CullTransparentMesh: 0
---- !u!114 &953736528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953736523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf146476dc8769041b63140727a64381, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &969279275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4182,7 +4169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3.499878}
+  m_AnchoredPosition: {x: 0, y: -3.5}
   m_SizeDelta: {x: 97.890015, y: 73}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1504632941
