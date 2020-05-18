@@ -217,8 +217,8 @@ InputManager:
     m_Name: MenuSubmit
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 0
-    positiveButton: 
+    negativeButton: 
+    positiveButton: joystick button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -233,8 +233,8 @@ InputManager:
     m_Name: MenuCancel
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 6
-    positiveButton: 
+    negativeButton: 
+    positiveButton: joystick button 6
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
